@@ -15,7 +15,8 @@ let printPrimeTable w =
       printf "%3d%c" n delim
       cnt+1
    primesUnder 
-   >> List.fold (w |> printCnt) 0 >> ignore 
+   >> List.fold (printCnt w) 0 
+   >> ignore 
 
 let pause () =
    printfn "\nPress any key..."
